@@ -712,7 +712,7 @@ function renderAll(){
   $('#emCount').textContent = em.length+' LPs · '+attioN+' identificados no Attio'+(scoped?' · recorte '+SCOPE:'');
   (function(){
     const CS_PT = {'Strong':'Forte','Good':'Boa','Weak':'Fraca','Very weak':'Muito fraca'};
-    const head = ['LP','Estágio','Prio','Captação','Orig.','Resp.','Região','Prox N/R','No Attio','Conexão','Primeira interação','Última interação','Next step'];
+    const head = ['LP','Estágio','Prio','Captação','Orig.','Resp.','Região','Prox N/R','No Attio','Primeira interação','Última interação','Next step'];
     $('#emTable thead').innerHTML = '<tr>'+head.map(h=>'<th>'+h+'</th>').join('')+'</tr>';
     const order = {'Due Diligence':0,'Meeting Norder - Done':1,'1st Meeting Rise - Done':2,'Engaged':3};
     const eRows = [...em].sort((a,b)=>(order[a.stage]??9)-(order[b.stage]??9));
@@ -726,7 +726,6 @@ function renderAll(){
       '<td>'+(e.regiao||'')+'</td>'+
       '<td>'+((e.pxn||e.pxr)?((e.pxn||'·')+' / '+(e.pxr||'·')):'')+'</td>'+
       '<td>'+(e.attio_found?'<span class="chip ok">&#10003; identificado</span>':'<span class="chip no">fora do CRM</span>')+'</td>'+
-      '<td>'+(e.attio_strength?CS_PT[e.attio_strength]||e.attio_strength:'')+'</td>'+
       '<td>'+(e.attio_first||'')+'</td>'+
       '<td>'+(e.attio_last||'')+'</td>'+
       '<td style="max-width:220px">'+(e.cta||'')+'</td>'+
