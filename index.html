@@ -63,6 +63,7 @@ break;case"<bookViews":;case"<bookViews>":;case"</bookViews>":break;case"<workbo
   .seg button:last-child{border-right:none;}
   .seg button:hover{color:var(--ink);}
   .seg button.on{background:var(--s2); color:#fff;}
+.seg-label{font-size:11px; font-weight:650; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); align-self:center; margin-right:10px;}
   .btn{border:1px solid var(--border); background:var(--surface-2); color:var(--ink-2); padding:8px 14px; border-radius:8px; font-size:13px; cursor:pointer; display:inline-flex; align-items:center; gap:8px; transition:.15s;}
   .btn:hover{background:var(--surface-3); color:var(--ink);}
   .btn.primary{background:var(--bronze); border-color:var(--bronze); color:#141310; font-weight:700;}
@@ -177,7 +178,8 @@ break;case"<bookViews":;case"<bookViews>":;case"</bookViews>":break;case"<workbo
     <button data-t="t6">Declínios</button>
     <button data-t="t5">Inteligência CRM</button>
     <span style="flex:1"></span>
-    <div class="seg" id="scopeSeg" title="Recorte por originação do relacionamento" style="align-self:center; margin:4px 0;">
+    <span class="seg-label">Originação</span>
+      <div class="seg" id="scopeSeg" title="Recorte por originação do relacionamento" style="align-self:center; margin:4px 0;">
       <button data-s="all" class="on">Agregado</button>
       <button data-s="Rise">Rise</button>
       <button data-s="Norder">Norder</button>
